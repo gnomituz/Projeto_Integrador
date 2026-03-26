@@ -10,6 +10,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Projeto_Integrador.Controllers.PacienteController",
+    "Method": "EmAtendimento",
+    "RelativePath": "api/Paciente/atendimento",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Projeto_Integrador.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

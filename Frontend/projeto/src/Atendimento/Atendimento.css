@@ -1,0 +1,30 @@
+.body { 
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card{
+    position: relative;
+    background-image: linear-gradient(to top, rgba(245, 89, 172, 0), rgb(186, 116, 210), rgb(109, 106, 204));
+    width: 330px;
+    height: 400px;
+    text-align: center;
+    box-shadow: -15px 20px 20px rgba(7, 7, 7, 0.45);
+    display: inline-block;
+    margin: 40px;
+    border-radius: 20px 20px 20px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.titulo {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 100px;
+    color: #2c3e50;
+}

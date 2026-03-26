@@ -22,4 +22,7 @@ insert into Hospital value
 (default, "Hospital Cruzeiro do Sul", "Rua x, 01 - Santana de Parnaíba-SP");
 
 insert into Paciente value 
-(123456789012, "Ismael", default, 1);
+(123456789012, "Ismael", 1, 1),
+(098765432109, "Maria", default, 1);
+
+SELECT * FROM Paciente WHERE Atendimento = 1;

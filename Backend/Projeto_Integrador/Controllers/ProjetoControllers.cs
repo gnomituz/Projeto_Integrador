@@ -15,5 +15,13 @@ namespace Projeto_Integrador.Controllers
             var pacientes = dao.Listar();
             return Ok(pacientes);
         }
+
+        [HttpGet, Route("atendimento")]
+        public IActionResult EmAtendimento()
+        {
+            PacienteDAO dao = new PacienteDAO();
+            var status = dao.EmAtendimento();
+            return Ok(status);
+        }
     }
 }

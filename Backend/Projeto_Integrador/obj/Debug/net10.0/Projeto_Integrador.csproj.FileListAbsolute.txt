@@ -49,3 +49,4 @@ C:\Users\Ismael e Babi\Desktop\PROJETO INTEGRADOR - UNIVESP\Backend\Projeto_Inte
 C:\Users\Ismael e Babi\Desktop\PROJETO INTEGRADOR - UNIVESP\Backend\Projeto_Integrador\obj\Debug\net10.0\Projeto_Integrador.pdb
 C:\Users\Ismael e Babi\Desktop\PROJETO INTEGRADOR - UNIVESP\Backend\Projeto_Integrador\obj\Debug\net10.0\Projeto_Integrador.genruntimeconfig.cache
 C:\Users\Ismael e Babi\Desktop\PROJETO INTEGRADOR - UNIVESP\Backend\Projeto_Integrador\obj\Debug\net10.0\ref\Projeto_Integrador.dll
+C:\Users\Ismael e Babi\Desktop\PROJETO INTEGRADOR - UNIVESP\Backend\Projeto_Integrador\obj\Debug\net10.0\Projeto_Integrador.sourcelink.json

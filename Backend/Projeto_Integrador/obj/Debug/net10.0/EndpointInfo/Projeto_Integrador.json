@@ -25,6 +25,18 @@
         }
       }
     },
+    "/api/Paciente/atendimento": {
+      "get": {
+        "tags": [
+          "Paciente"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
