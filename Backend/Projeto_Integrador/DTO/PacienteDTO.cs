@@ -6,7 +6,6 @@ namespace Projeto_Integrador.DTO
     {
         public string CPF { get; set; }
         public string Nome { get; set; }
-        public bool Atendimento { get; set; }
-        public int HospitalID {  get; set; }
+
     }
 }

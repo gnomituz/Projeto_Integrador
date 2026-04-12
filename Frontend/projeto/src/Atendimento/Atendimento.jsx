@@ -2,13 +2,14 @@ import React from "react";
 import './Atendimento.css';
 
 
-function Atendimento({ cpf, nome, atendimento, hospitalID}) {
+function Atendimento({ pacienteCPF, pacienteNome,  hospitalCNPJ, hospitalNome, enderecoHospital }) {
   return (
         <div className="card">
-            <p>CPF: {cpf}</p>
-            <p>Nome: {nome}</p>
-            <p>Status: {atendimento ? "Em atendimento" : "Não está em atendimento"}</p>
-            <p>HospitalID: {hospitalID}</p>
+            <p>CPF: {pacienteCPF}</p>
+            <p>Nome: {pacienteNome}</p>
+            <p>HospitalCNPJ: {hospitalCNPJ}</p>
+            <p>Hospital: {hospitalNome}</p>
+            <p>Endereço: {enderecoHospital}</p>
         </div>
   );
 }

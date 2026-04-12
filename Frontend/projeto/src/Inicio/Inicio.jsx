@@ -14,8 +14,8 @@ function Inicio() {
             <p className="subtitulo">Use o menu para navegar entre as diferentes seções do sistema.</p>
 
             
-            <button className="botao" onClick={() => navigate('/api/paciente')}>Lista de Pacientes</button>
-            <button className="botao" onClick={() => navigate('/api/paciente/atendimento')}>Pacientes em atendimento</button>
+            <button className="botao" onClick={() => navigate('/api/projeto/paciente')}>Lista de Pacientes</button>
+            <button className="botao" onClick={() => navigate('/api/projeto/atendimento')}>Pacientes em atendimento</button>
         </div>
     );
 }

@@ -6,9 +6,9 @@ namespace Projeto_Integrador.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PacienteController : ControllerBase
+    public class ProjetoController : ControllerBase
     {
-        [HttpGet]
+        [HttpGet, Route("Paciente")]
         public IActionResult Listar()
         {
             PacienteDAO dao = new PacienteDAO();
@@ -16,12 +16,21 @@ namespace Projeto_Integrador.Controllers
             return Ok(pacientes);
         }
 
-        [HttpGet, Route("atendimento")]
+        [HttpGet, Route("Atendimento")]
         public IActionResult EmAtendimento()
-        {
-            PacienteDAO dao = new PacienteDAO();
-            var status = dao.EmAtendimento();
-            return Ok(status);
+        { 
+            AtendimentoDAO dao = new AtendimentoDAO();
+            var atendimentos = dao.EmAtendimento();
+            return Ok(atendimentos);
         }
+
+        [HttpGet, Route("Hospital")]
+        public IActionResult ListarHospital()
+        {
+            AtendimentoDAO dao = new AtendimentoDAO();
+            var hospitais = dao.ListarHospital();
+            return Ok(hospitais);
+        }
+
     }
 }

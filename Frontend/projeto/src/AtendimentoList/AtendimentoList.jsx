@@ -3,14 +3,14 @@ import { useState, useEffect } from "react";
 import Atendimento   from "../Atendimento/Atendimento.jsx";
 
 function AtendimentoList() {
-  const [pacientes, setPacientes] = useState([]);
+  const [atendimentos, setAtendimentos] = useState([]);
 
   useEffect(() => {
-    fetch("https://localhost:44324/api/paciente/atendimento", {
+    fetch("https://localhost:44324/api/projeto/atendimento", {
       method: "GET",
     })
       .then((response) => response.json())
-      .then((json) => setPacientes(json))
+      .then((json) => setAtendimentos(json))
       .catch((error) => {
         console.log(error);
         alert("Erro ao buscar os pacientes em atendimento.");
@@ -19,13 +19,15 @@ function AtendimentoList() {
 
   return (
     <div>
-      {pacientes.map((paciente) => (
+      {atendimentos.map((atendimento) => (
         <Atendimento
-          key={paciente.cpf}
-          cpf={paciente.cpf}
-          nome={paciente.nome}
-          atendimento={paciente.atendimento}
-          hospitalID={paciente.hospitalID}
+          key={atendimento.id}
+          id={atendimento.id}
+          pacienteCPF={atendimento.pacienteCPF}
+          pacienteNome={atendimento.pacienteNome}
+          hospitalCNPJ={atendimento.hospitalCNPJ}
+          hospitalNome={atendimento.hospitalNome}
+          enderecoHospital={atendimento.enderecoHospital}
         />
       ))}
     </div>

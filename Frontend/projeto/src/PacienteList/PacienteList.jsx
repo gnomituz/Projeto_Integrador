@@ -6,7 +6,7 @@ function PacienteList() {
   const [pacientes, setPacientes] = useState([]);
 
   useEffect(() => {
-    fetch("https://localhost:44324/api/paciente", {
+    fetch("https://localhost:44324/api/projeto/paciente", {
       method: "GET",
     })
       .then((response) => response.json())
@@ -24,8 +24,6 @@ function PacienteList() {
           key={paciente.cpf}
           cpf={paciente.cpf}
           nome={paciente.nome}
-          atendimento={paciente.atendimento}
-          hospitalID={paciente.hospitalID}
         />
       ))}
     </div>
