@@ -64,5 +64,35 @@ namespace Projeto_Integrador.DAO
             return hospitais;
 
         }
+
+        public void DeletarAtendimento(AtendimentoDTO atendimento)
+        {
+            var conexao = ConnectionFactory.Build();
+            conexao.Open();
+
+            var query = @"DELETE FROM Atendimento WHERE ID = @ID;";
+
+            var comando = new MySqlCommand(query, conexao);
+            comando.Parameters.AddWithValue("@ID", atendimento.ID);
+
+            comando.ExecuteNonQuery();
+            conexao.Close();
+        }
+
+        public void AdicionarAtendimento(AtendimentoDTO atendimento)
+        {
+            var conexao = ConnectionFactory.Build();
+            conexao.Open();
+
+            var query = @"INSERT INTO Atendimento (PacienteCPF, HospitalCNPJ) 
+              VALUES (@PacienteCPF, @HospitalCNPJ);";
+
+            var comando = new MySqlCommand(query, conexao);
+            comando.Parameters.AddWithValue("@PacienteCPF", atendimento.PacienteCPF);
+            comando.Parameters.AddWithValue("@HospitalCNPJ", atendimento.HospitalCNPJ);
+
+            comando.ExecuteNonQuery();
+            conexao.Close();
+        }
     }
 }

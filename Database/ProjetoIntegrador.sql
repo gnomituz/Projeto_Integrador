@@ -3,7 +3,7 @@ CREATE DATABASE ProjetoIntegrador;
 USE ProjetoIntegrador;
 
 CREATE TABLE Hospital (
-    CNPJ INT NOT NULL AUTO_INCREMENT,
+    CNPJ VARCHAR(14),
     Nome VARCHAR(100),
     Endereco VARCHAR(200),
     primary key(CNPJ)
@@ -25,16 +25,16 @@ CREATE TABLE Atendimento (
 );
 
 insert into Hospital value 
-(11111111111111, "Hospital SantaAna", "Rua y, 03 - Santana de Parnaíba-SP"),
-(22222222222222, "Hospital Cruzeiro do Sul", "Rua x, 01 - Santana de Parnaíba-SP");
+("11111111111111", "Santa'Ana", "Rua y, 03 - Santana de Parnaíba-SP"),
+("22222222222222", "Cruzeiro do Sul", "Rua x, 01 - Santana de Parnaíba-SP");
 
 insert into Paciente value 
-(123456789012, "Ismael"),
-(111111111111, "Lucas"),
-(222222222222, "Lisa"),
-(098765432109, "Maria");
+("123456789012", "Ismael"),
+("111111111111", "Lucas"),
+("222222222222", "Lisa"),
+("098765432109", "Maria");
 
 INSERT INTO Atendimento value
-(default, 098765432109, 11111111111111),
-(default, 111111111111, 22222222222222), 
-(default, 123456789012, 11111111111111); 
+(default, "098765432109", "11111111111111"),
+(default, "111111111111", "22222222222222"), 
+(default, "123456789012", "11111111111111"); 

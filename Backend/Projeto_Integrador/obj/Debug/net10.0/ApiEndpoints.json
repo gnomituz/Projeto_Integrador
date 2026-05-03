@@ -1,6 +1,54 @@
 [
   {
     "ContainingType": "Projeto_Integrador.Controllers.ProjetoController",
+    "Method": "DeletarAtendimento",
+    "RelativePath": "api/Projeto/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_Integrador.Controllers.ProjetoController",
+    "Method": "AdicionarAtendimento",
+    "RelativePath": "api/Projeto/AdicionarAtendimento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "atendimento",
+        "Type": "Projeto_Integrador.DTO.AtendimentoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_Integrador.Controllers.ProjetoController",
+    "Method": "AdicionarPaciente",
+    "RelativePath": "api/Projeto/AdicionarPaciente",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paciente",
+        "Type": "Projeto_Integrador.DTO.PacienteDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_Integrador.Controllers.ProjetoController",
     "Method": "EmAtendimento",
     "RelativePath": "api/Projeto/Atendimento",
     "HttpMethod": "GET",

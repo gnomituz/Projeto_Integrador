@@ -17,9 +17,12 @@ function AtendimentoList() {
       });
   }, []);
 
-  return (
-    <div>
-      {atendimentos.map((atendimento) => (
+  return (    
+    <div className="container">
+    {atendimentos.length === 0 ? (
+        <p className="titulo">Nenhum atendimento encontrado.</p>
+    ) : (
+      atendimentos.map((atendimento) => (
         <Atendimento
           key={atendimento.id}
           id={atendimento.id}
@@ -29,6 +32,7 @@ function AtendimentoList() {
           hospitalNome={atendimento.hospitalNome}
           enderecoHospital={atendimento.enderecoHospital}
         />
+      )
       ))}
     </div>
   );

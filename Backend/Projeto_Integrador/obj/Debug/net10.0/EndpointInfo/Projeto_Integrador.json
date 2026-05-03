@@ -49,6 +49,97 @@
         }
       }
     },
+    "/api/Projeto/{id}": {
+      "delete": {
+        "tags": [
+          "Projeto"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Projeto/AdicionarAtendimento": {
+      "post": {
+        "tags": [
+          "Projeto"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AtendimentoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AtendimentoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AtendimentoDTO"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Projeto/AdicionarPaciente": {
+      "post": {
+        "tags": [
+          "Projeto"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PacienteDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PacienteDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PacienteDTO"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -91,6 +182,62 @@
   },
   "components": {
     "schemas": {
+      "AtendimentoDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "pacienteCPF": {
+            "type": "string"
+          },
+          "pacienteNome": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "hospitalCNPJ": {
+            "type": "string"
+          },
+          "hospitalNome": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "enderecoHospital": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "quantidadePacientes": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          }
+        }
+      },
+      "PacienteDTO": {
+        "type": "object",
+        "properties": {
+          "cpf": {
+            "type": "string"
+          },
+          "nome": {
+            "type": "string"
+          }
+        }
+      },
       "WeatherForecast": {
         "type": "object",
         "properties": {

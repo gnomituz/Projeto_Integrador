@@ -2,6 +2,7 @@ import { hasSelectionSupport } from "@testing-library/user-event/dist/utils";
 import React from "react";
 import { useState, useEffect } from "react";
 import Hospital from "../Hospital/Hospital";
+import HospitalPage from "../HospitalPage/HospitalPage";
 
 
 function HospitalList() {
@@ -21,6 +22,7 @@ function HospitalList() {
 
     return (
         <div>
+            <HospitalPage />
             {hospitais.map((hospital) => (
                 <Hospital
                     key={hospital.hospitalCNPJ}

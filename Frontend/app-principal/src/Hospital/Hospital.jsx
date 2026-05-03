@@ -1,19 +1,24 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import './Hospital.css';
-import { useNavigate } from 'react-router-dom';
-import HospitalList from "../HospitalList/HospitalList";
 
-
-function Hospital({ hospitalCNPJ, hospitalNome, enderecoHospital, quantidadePacientes }) {
+function Hospital({ hospitalNome, enderecoHospital, quantidadePacientes }) {
     return (
-        <div className="card">
-            <h1>Hospital: {hospitalNome}</h1>
-            <h1>Endereço: {enderecoHospital}</h1>
-            <h1>Quantidade de Pacientes: {quantidadePacientes}</h1>
-        </div>
-    );
+            <div className="card">
+                <h2 className="card-titulo">{hospitalNome}</h2>
 
+                <p className="card-info">
+                    <strong>Endereço:</strong> {enderecoHospital}
+                </p>
+
+                <p className="card-info">
+                    <strong>Pacientes:</strong> {quantidadePacientes}
+                </p>
+
+                <span className={`status ${quantidadePacientes > 2 ? "lotado" : "normal"}`}>
+                    {quantidadePacientes > 2 ? "Lotado" : "Normal"}
+                </span>
+            </div>
+    );
 }
 
 export default Hospital;

@@ -9,13 +9,15 @@ function Inicio() {
     const navigate = useNavigate();
 
     return (
-        <div className="body">
-            <h1 className="titulo">Sistema do hospital X</h1>
+        <div className="inicio-container">
+            <h1 className="titulo">Sistema do hospital Santa'Ana</h1>
             <p className="subtitulo">Use o menu para navegar entre as diferentes seções do sistema.</p>
 
             
             <button className="botao" onClick={() => navigate('/api/projeto/paciente')}>Lista de Pacientes</button>
+            <button className="botao" onClick={() => navigate('/api/projeto/AdicionarPaciente')}>Adicionar Paciente</button>
             <button className="botao" onClick={() => navigate('/api/projeto/atendimento')}>Pacientes em atendimento</button>
+            <button className="botao" onClick={() => navigate('/api/projeto/AdicionarAtendimento')}>Novo atendimento</button>
         </div>
     );
 }
