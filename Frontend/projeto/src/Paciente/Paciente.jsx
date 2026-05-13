@@ -5,8 +5,8 @@ import './Paciente.css';
 function Paciente({ cpf, nome}) {
   return (
     <div className="card">
-        <p>CPF: {cpf}</p>
-        <p>Nome: {nome}</p>
+        <p><span>CPF: </span>{cpf}</p>
+        <p><span>Nome: </span>{nome}</p>
     </div>
   );
 }

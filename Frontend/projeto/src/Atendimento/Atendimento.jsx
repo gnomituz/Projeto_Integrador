@@ -24,11 +24,11 @@ function Atendimento({ id, pacienteCPF, pacienteNome,  hospitalCNPJ, hospitalNom
 
   return (
         <div className="card">
-            <p>CPF: {pacienteCPF}</p>
-            <p>Nome: {pacienteNome}</p>
-            <p>HospitalCNPJ: {hospitalCNPJ}</p>
-            <p>Hospital: {hospitalNome}</p>
-            <p>Endereço: {enderecoHospital}</p>
+            <p><span>CPF: {pacienteCPF}</span></p>
+            <p><span>Nome: {pacienteNome}</span></p>
+            <p><span>HospitalCNPJ: {hospitalCNPJ}</span></p>
+            <p><span>Hospital: {hospitalNome}</span></p>
+            <p><span>Endereço: {enderecoHospital}</span></p>
             <button onClick={deletarAtendimento}>Excluir Atendimento</button>
         </div>
   );

@@ -16,17 +16,19 @@
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .titulo {
     font-size: 40px;
     font-weight: bold;
     margin-top: 100px;
-    color: #2c3e50;
+    color: #0056b3;
 }
 .subtitulo {
     font-size: 18px;
     margin-top: 15px;
-    color: #555;
+    color: #ffffff;
 }
 .botao {
     background-color: #007BFF;
